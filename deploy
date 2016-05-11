@@ -4,7 +4,7 @@ SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 UPLOAD_DIR=upload
 
-if [[ ! -d dist ]]; then
+if [[ ! -d $UPLOAD_DIR ]]; then
   git clone $(git remote -v | grep origin | tail -n 1 | awk '{print $2}') $UPLOAD_DIR
   pushd $UPLOAD_DIR >> /dev/null
   git checkout master
