@@ -13,6 +13,7 @@ fi
 
 ng build
 rm -rf $UPLOAD_DIR/*
+cp -r dist/* $UPLOAD_DIR/
 cp CNAME $UPLOAD_DIR/
 cp LICENSE $UPLOAD_DIR/
 pushd $UPLOAD_DIR >> /dev/null
