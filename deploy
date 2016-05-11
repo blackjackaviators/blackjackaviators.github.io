@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+# vi: ft=sh
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+UPLOAD_DIR=upload
+
+if [[ ! -d dist ]]; then
+  git clone $(git remote -v | grep origin | tail -n 1 | awk '{print $2}') $UPLOAD_DIR
+  pushd $UPLOAD_DIR >> /dev/null
+  git checkout master
+  popd >> /dev/null
+fi
+
+ng build
+rm -rf $UPLOAD_DIR/*
+cp CNAME $UPLOAD_DIR/
+cp LICENSE $UPLOAD_DIR/
+pushd $UPLOAD_DIR >> /dev/null
+git add .
+git commit -m "Automatic deploy build"
+git push -f origin master
+popd >> /dev/null
+
