@@ -1,14 +1,14 @@
-import { BlackjackSitePage } from './app.po';
+import { BlackjackAviatorsPage } from './app.po';
 
-describe('blackjack-site App', function() {
-  let page: BlackjackSitePage;
+describe('blackjack-aviators App', function() {
+  let page: BlackjackAviatorsPage;
 
   beforeEach(() => {
-    page = new BlackjackSitePage();
+    page = new BlackjackAviatorsPage();
   })
 
   it('should display message saying app works', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('blackjack-site works!');
+    expect(page.getParagraphText()).toEqual('blackjack-aviators works!');
   });
 });

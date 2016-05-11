@@ -1,2 +1,2 @@
 export {environment} from './environment';
-export {BlackjackSiteAppComponent} from './blackjack-site.component';
+export {BlackjackAviatorsAppComponent} from './blackjack-aviators.component';

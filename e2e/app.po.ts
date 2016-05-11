@@ -1,9 +1,9 @@
-export class BlackjackSitePage {
+export class BlackjackAviatorsPage {
   navigateTo() {
     return browser.get('/');
   }
 
   getParagraphText() {
-    return element(by.css('blackjack-site-app h1')).getText();
+    return element(by.css('blackjack-aviators-app h1')).getText();
   }
 }
