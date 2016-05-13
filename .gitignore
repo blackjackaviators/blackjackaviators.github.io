@@ -4,6 +4,7 @@
 /dist
 /tmp
 /upload
+/elm-stuff
 
 # dependencies
 /node_modules
