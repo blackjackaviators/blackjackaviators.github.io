@@ -1,4 +1,9 @@
-require('./less/style.less');
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App';
+import './index.css';
 
-var Elm = require( './Main.elm'  );
-Elm.embed( Elm.Main, document.getElementById( 'main'  ));
+ReactDOM.render(
+  <App />,
+  document.getElementById('root')
+);
