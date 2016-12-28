@@ -22,5 +22,6 @@ body, html, #root, #app {
 
 #logo img {
   align-content: flex-end;
-  height: 600px;
+  min-height: 200px;
+  max-height: 600px;
 }
